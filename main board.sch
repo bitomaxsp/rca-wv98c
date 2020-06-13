@@ -7,7 +7,7 @@ Sheet 1 1
 Title "WV98C main board"
 Date "2020-06-08"
 Rev "Rev.A"
-Comp ""
+Comp "Dmitry Ponomarev"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -190,39 +190,6 @@ F 3 "" H 9400 8300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9800 7900 9400 7900
-$Comp
-L Device:R_POT RV19
-U 1 1 5EE15F6F
-P 12950 5600
-F 0 "RV19" H 12881 5646 50  0000 R CNN
-F 1 "10k" H 12881 5555 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-15-H01_Horizontal" H 12950 5600 50  0001 C CNN
-F 3 "~" H 12950 5600 50  0001 C CNN
-	1    12950 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV21
-U 1 1 5EE1660E
-P 14100 5600
-F 0 "RV21" H 14031 5646 50  0000 R CNN
-F 1 "10k" H 14031 5555 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-15-H01_Horizontal" H 14100 5600 50  0001 C CNN
-F 3 "~" H 14100 5600 50  0001 C CNN
-	1    14100 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV20
-U 1 1 5EE16959
-P 15200 5600
-F 0 "RV20" H 15131 5646 50  0000 R CNN
-F 1 "10k" H 15131 5555 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-15-H01_Horizontal" H 15200 5600 50  0001 C CNN
-F 3 "~" H 15200 5600 50  0001 C CNN
-	1    15200 5600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15200 5750 15200 6000
 Wire Wire Line
@@ -1142,23 +1109,14 @@ $EndComp
 $Comp
 L Connector:Conn_01x01_Female J36
 U 1 1 5EF5702B
-P 14400 1050
-F 0 "J36" H 14292 825 50  0000 C CNN
-F 1 "#40" H 14292 916 50  0000 C CNN
-F 2 "wv98:Hole_Din1.2mm_Dout3mm" H 14400 1050 50  0001 C CNN
-F 3 "~" H 14400 1050 50  0001 C CNN
-	1    14400 1050
+P 14050 900
+F 0 "J36" H 13942 675 50  0000 C CNN
+F 1 "#40" H 13942 766 50  0000 C CNN
+F 2 "wv98:Hole_Din1.2mm_Dout3mm" H 14050 900 50  0001 C CNN
+F 3 "~" H 14050 900 50  0001 C CNN
+	1    14050 900 
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	14200 1050 14100 1050
-Wire Wire Line
-	13850 900  14100 900 
-Wire Wire Line
-	14100 900  14100 1050
-Connection ~ 14100 1050
-Wire Wire Line
-	14100 1050 14000 1050
 Wire Notes Line
 	14600 1450 14600 700 
 Wire Notes Line
@@ -1213,17 +1171,6 @@ Wire Wire Line
 Text Notes 4850 7900 0    50   ~ 0
 +88V
 Connection ~ 5100 7950
-$Comp
-L Device:R_POT RV33
-U 1 1 5EDF784B
-P 5100 8700
-F 0 "RV33" H 5031 8746 50  0000 R CNN
-F 1 "10k" H 5031 8655 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-15-H01_Horizontal" H 5100 8700 50  0001 C CNN
-F 3 "~" H 5100 8700 50  0001 C CNN
-	1    5100 8700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5100 9300 5100 9250
 Wire Wire Line
@@ -1298,8 +1245,6 @@ Wire Wire Line
 Connection ~ 14250 6000
 Wire Wire Line
 	14250 6000 15200 6000
-Text Notes 13150 5650 0    50   ~ 0
-DC+
 Text Notes 15450 5650 0    50   ~ 0
 DC-
 Text Notes 14300 5650 0    50   ~ 0
@@ -1573,4 +1518,54 @@ F 3 "~" H 9150 1900 50  0001 C CNN
 	1    9150 1900
 	-1   0    0    -1  
 $EndComp
+$Comp
+L wv98:R-4 R19
+U 1 1 5EFD5F5A
+P 12950 5600
+F 0 "R19" H 12862 5646 50  0000 R CNN
+F 1 "R-4" H 12862 5555 50  0000 R CNN
+F 2 "wv98:R-4-in-row" H 12950 6000 50  0001 C CNN
+F 3 "" H 12950 6000 50  0001 C CNN
+	1    12950 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L wv98:R-4 R19
+U 3 1 5EFD8603
+P 15200 5600
+F 0 "R19" H 15113 5646 50  0000 R CNN
+F 1 "R-4" H 15113 5555 50  0000 R CNN
+F 2 "wv98:R-4-in-row" H 15200 6000 50  0001 C CNN
+F 3 "" H 15200 6000 50  0001 C CNN
+	3    15200 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L wv98:R-4 R19
+U 4 1 5EFD989C
+P 5100 8700
+F 0 "R19" H 5013 8746 50  0000 R CNN
+F 1 "R-4" H 5013 8655 50  0000 R CNN
+F 2 "wv98:R-4-in-row" H 5100 9100 50  0001 C CNN
+F 3 "" H 5100 9100 50  0001 C CNN
+	4    5100 8700
+	1    0    0    -1  
+$EndComp
+Text Notes 13150 5650 0    50   ~ 0
+DC+
+$Comp
+L wv98:R-4 R19
+U 2 1 5EFD717F
+P 14100 5600
+F 0 "R19" H 14013 5646 50  0000 R CNN
+F 1 "R-4" H 14013 5555 50  0000 R CNN
+F 2 "wv98:R-4-in-row" H 14100 6000 50  0001 C CNN
+F 3 "" H 14100 6000 50  0001 C CNN
+	2    14100 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14000 1050 14200 1050
+NoConn ~ 14200 1050
+NoConn ~ -100 550 
 $EndSCHEMATC
