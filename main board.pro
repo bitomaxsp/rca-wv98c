@@ -1,4 +1,4 @@
-update=2020 June 11, Thursday 22:47:16
+update=2020 June 14, Sunday 12:50:21
 version=1
 last_client=kicad
 [general]
@@ -25,21 +25,22 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=main board original.net
+LastNetListRead=main board.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-MinTrackWidth=1.5
+MinTrackWidth=1
 MinViaDiameter=1
 MinViaDrill=0.7999999999999999
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=1.5
-TrackWidth2=2
+TrackWidth2=1
+TrackWidth3=2
 ViaDiameter1=1
 ViaDrill1=0.8
 dPairWidth1=1.5
@@ -238,7 +239,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.5
+Clearance=0.2
 TrackWidth=1.5
 ViaDiameter=1
 ViaDrill=0.8
