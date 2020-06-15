@@ -1427,17 +1427,6 @@ F 3 "~" H 2100 10000 50  0001 C CNN
 	1    2100 10000
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GNDREF #PWR0104
-U 1 1 5F044512
-P 2100 10250
-F 0 "#PWR0104" H 2100 10000 50  0001 C CNN
-F 1 "GNDREF" H 2105 10077 50  0000 C CNN
-F 2 "" H 2100 10250 50  0001 C CNN
-F 3 "" H 2100 10250 50  0001 C CNN
-	1    2100 10250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1950 9800 1950 10000
 Wire Wire Line
@@ -1568,4 +1557,26 @@ Wire Wire Line
 	14000 1050 14200 1050
 NoConn ~ 14200 1050
 NoConn ~ -100 550 
+$Comp
+L power:Earth #PWR02
+U 1 1 5EEA3B0A
+P 2100 10250
+F 0 "#PWR02" H 2100 10000 50  0001 C CNN
+F 1 "Earth" H 2100 10100 50  0001 C CNN
+F 2 "" H 2100 10250 50  0001 C CNN
+F 3 "~" H 2100 10250 50  0001 C CNN
+	1    2100 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5EEA4951
+P 2100 9900
+F 0 "H1" H 2200 9949 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2200 9858 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 2100 9900 50  0001 C CNN
+F 3 "~" H 2100 9900 50  0001 C CNN
+	1    2100 9900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
