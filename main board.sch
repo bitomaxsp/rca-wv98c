@@ -1579,4 +1579,17 @@ F 3 "~" H 2100 9900 50  0001 C CNN
 	1    2100 9900
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint_Probe TP1
+U 1 1 5F0EE8DF
+P 6600 5800
+F 0 "TP1" H 6557 5901 50  0000 R CNN
+F 1 "Pnt. D" H 6557 5810 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" H 6800 5800 50  0001 C CNN
+F 3 "~" H 6800 5800 50  0001 C CNN
+	1    6600 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 6250 6600 5800
 $EndSCHEMATC
