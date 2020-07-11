@@ -210,7 +210,7 @@ F 3 "~" H 1150 8650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Valve:6AL5 U1
+L main-board-rescue:6AL5-Valve U1
 U 1 1 5EE18FA1
 P 2100 5500
 F 0 "U1" H 1873 5479 50  0000 R CNN
@@ -221,7 +221,7 @@ F 3 "https://frank.pocnet.net/sheets/093/6/6AL5.pdf" H 2100 5450 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Valve:6AL5 U1
+L main-board-rescue:6AL5-Valve U1
 U 2 1 5EE1ABC8
 P 1250 5550
 F 0 "U1" H 850 5600 50  0000 L CNN
@@ -1499,12 +1499,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x01_Female J46
 U 1 1 5F021F26
-P 8050 1550
-F 0 "J46" H 7942 1735 50  0000 C CNN
-F 1 "#Blu" H 7942 1644 50  0000 C CNN
-F 2 "wv98:Hole_Din1.2mm_Dout3mm" H 8050 1550 50  0001 C CNN
-F 3 "~" H 8050 1550 50  0001 C CNN
-	1    8050 1550
+P 8050 1500
+F 0 "J46" H 7942 1685 50  0000 C CNN
+F 1 "#Blu" H 7942 1594 50  0000 C CNN
+F 2 "wv98:Hole_Din1.2mm_Dout3mm" H 8050 1500 50  0001 C CNN
+F 3 "~" H 8050 1500 50  0001 C CNN
+	1    8050 1500
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1521,7 +1521,7 @@ Wire Wire Line
 Wire Wire Line
 	14700 8750 15150 8750
 $Comp
-L Valve:6AL5 U1
+L main-board-rescue:6AL5-Valve U1
 U 3 1 5EE1C8AA
 P 14600 8300
 F 0 "U1" H 14372 8263 50  0000 R CNN
@@ -1554,55 +1554,17 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8800 900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4001 D2
-U 1 1 5EFA2481
-P 8800 2150
-F 0 "D2" H 8800 2367 50  0000 C CNN
-F 1 "1N4001" H 8800 2276 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P5.08mm_Vertical_KathodeUp" H 8800 1975 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8800 2150 50  0001 C CNN
-	1    8800 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP C100
 U 1 1 5EFA3093
-P 9250 1250
-F 0 "C100" H 9368 1296 50  0000 L CNN
-F 1 "1000uF" H 9368 1205 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9288 1100 50  0001 C CNN
-F 3 "~" H 9250 1250 50  0001 C CNN
-F 4 "16V" H 9250 1250 50  0001 C CNN "VDC"
-	1    9250 1250
+P 9250 1200
+F 0 "C100" H 9368 1246 50  0000 L CNN
+F 1 "2000uF" H 9368 1155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9288 1050 50  0001 C CNN
+F 3 "~" H 9250 1200 50  0001 C CNN
+F 4 "16V" H 9250 1200 50  0001 C CNN "VDC"
+	1    9250 1200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:CP C101
-U 1 1 5EFA3BA8
-P 9250 1850
-F 0 "C101" H 9368 1896 50  0000 L CNN
-F 1 "1000uF" H 9368 1805 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9288 1700 50  0001 C CNN
-F 3 "~" H 9250 1850 50  0001 C CNN
-F 4 "16V" H 9250 1850 50  0001 C CNN "VDC"
-	1    9250 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 900  9250 900 
-Wire Wire Line
-	9250 900  9250 1100
-Wire Wire Line
-	9250 2000 9250 2150
-Connection ~ 9250 900 
-Wire Wire Line
-	8250 900  8500 900 
-Connection ~ 8500 900 
-Wire Wire Line
-	8500 900  8650 900 
-Wire Wire Line
-	8500 2150 8650 2150
-Connection ~ 9250 2150
 $Comp
 L power:GND #PWR0110
 U 1 1 5EFEB127
@@ -1615,14 +1577,7 @@ F 3 "" H 9250 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 1550 9250 1550
-Connection ~ 9250 1550
-Wire Wire Line
-	9250 1550 9250 1700
-Wire Wire Line
-	8950 2150 9250 2150
-Wire Wire Line
-	8500 900  8500 2150
+	8250 1500 9250 1500
 $Comp
 L Diode:1N4148 D4
 U 1 1 5F01CF09
@@ -1662,8 +1617,6 @@ Wire Wire Line
 	10500 1800 10500 1700
 Wire Wire Line
 	10500 1000 10500 900 
-Wire Wire Line
-	9250 900  10500 900 
 $Comp
 L Device:Q_PNP_EBC Q1
 U 1 1 5F02E4FF
@@ -1765,8 +1718,6 @@ F 3 "" H 12900 2450 50  0001 C CNN
 	1    12900 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 1400 9250 1550
 Wire Wire Line
 	12100 1300 11950 1300
 Connection ~ 12600 900 
@@ -1870,8 +1821,6 @@ Wire Wire Line
 	12300 2450 12300 2350
 Wire Wire Line
 	10500 2450 10500 2100
-Wire Wire Line
-	9250 2150 9250 2450
 Wire Wire Line
 	14100 1650 14500 1650
 Wire Wire Line
@@ -2200,5 +2149,95 @@ Wire Wire Line
 Wire Wire Line
 	1350 8650 2400 8650
 Text Notes 1850 7550 0    50   ~ 0
-Add R100 if +88 is to be achieved
+Add R100 if +88 is to be achieved\notherwise add jumper wire
+Wire Wire Line
+	8250 900  8500 900 
+Text Notes 9300 850  0    50   ~ 0
+12V DC
+$Comp
+L Diode:1N4001 D2
+U 1 1 5F096423
+P 8500 1800
+F 0 "D2" H 8500 1583 50  0000 C CNN
+F 1 "1N4001" H 8500 1674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P5.08mm_Vertical_KathodeUp" H 8500 1625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8500 1800 50  0001 C CNN
+	1    8500 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8950 900  9250 900 
+$Comp
+L Device:CP C101
+U 1 1 5F097E57
+P 9250 1800
+F 0 "C101" H 9368 1846 50  0000 L CNN
+F 1 "2000uF" H 9368 1755 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9288 1650 50  0001 C CNN
+F 3 "~" H 9250 1800 50  0001 C CNN
+F 4 "16V" H 9250 1800 50  0001 C CNN "VDC"
+	1    9250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 1050 9250 900 
+Connection ~ 9250 900 
+Wire Wire Line
+	9250 900  10500 900 
+Connection ~ 8500 900 
+Wire Wire Line
+	8500 900  8650 900 
+Wire Wire Line
+	9250 1350 9250 1500
+Wire Wire Line
+	9250 1950 9250 2200
+Wire Wire Line
+	8500 2200 9250 2200
+Connection ~ 9250 2200
+Wire Wire Line
+	9250 2200 9250 2450
+Connection ~ 9250 1500
+Wire Wire Line
+	9250 1500 9250 1650
+Wire Wire Line
+	8500 1950 8500 2200
+Wire Wire Line
+	8500 900  8500 1650
+$Comp
+L Connector:TestPoint_Probe TP8
+U 1 1 5F0B2667
+P 3650 10700
+F 0 "TP8" H 3802 10801 50  0000 L CNN
+F 1 "TP-GND" H 3802 10710 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 3850 10700 50  0001 C CNN
+F 3 "~" H 3850 10700 50  0001 C CNN
+	1    3650 10700
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F0B30ED
+P 3450 10700
+F 0 "#PWR02" H 3450 10450 50  0001 C CNN
+F 1 "GND" V 3455 10572 50  0000 R CNN
+F 2 "" H 3450 10700 50  0001 C CNN
+F 3 "" H 3450 10700 50  0001 C CNN
+	1    3450 10700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 10700 3650 10700
+$Comp
+L Connector:TestPoint_Probe TP9
+U 1 1 5F0A5CDA
+P 5000 5850
+F 0 "TP9" H 5152 5951 50  0000 L CNN
+F 1 "Pnt D" H 5152 5860 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 5200 5850 50  0001 C CNN
+F 3 "~" H 5200 5850 50  0001 C CNN
+	1    5000 5850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6200 5000 5850
 $EndSCHEMATC
