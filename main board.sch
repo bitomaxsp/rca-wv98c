@@ -209,28 +209,6 @@ F 3 "~" H 1150 8650 50  0001 C CNN
 	1    1150 8650
 	-1   0    0    -1  
 $EndComp
-$Comp
-L main-board-rescue:6AL5-Valve U1
-U 1 1 5EE18FA1
-P 2100 5500
-F 0 "U1" H 1873 5479 50  0000 R CNN
-F 1 "6AL5" H 1873 5570 50  0000 R CNN
-F 2 "wv98:6AL5" H 2100 5450 50  0001 C CNN
-F 3 "https://frank.pocnet.net/sheets/093/6/6AL5.pdf" H 2100 5450 50  0001 C CNN
-	1    2100 5500
-	1    0    0    1   
-$EndComp
-$Comp
-L main-board-rescue:6AL5-Valve U1
-U 2 1 5EE1ABC8
-P 1250 5550
-F 0 "U1" H 850 5600 50  0000 L CNN
-F 1 "6AL5" H 850 5500 50  0000 L CNN
-F 2 "wv98:6AL5" H 1250 5500 50  0001 C CNN
-F 3 "https://frank.pocnet.net/sheets/093/6/6AL5.pdf" H 1250 5500 50  0001 C CNN
-	2    1250 5550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1300 10100 1450 10100
 Wire Wire Line
@@ -461,11 +439,6 @@ $EndComp
 Wire Wire Line
 	1150 6200 1150 6350
 Connection ~ 1150 6200
-Wire Wire Line
-	1250 4900 2000 4900
-Wire Wire Line
-	2000 5100 2000 4900
-Connection ~ 2000 4900
 $Comp
 L Device:C C1
 U 1 1 5EE69AC6
@@ -478,8 +451,6 @@ F 4 "600V" H 2600 4900 50  0001 C CNN "VDC"
 	1    2600 4900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2000 4900 2450 4900
 Wire Wire Line
 	1950 3750 2300 3750
 Wire Wire Line
@@ -1314,8 +1285,6 @@ Wire Notes Line
 Wire Notes Line
 	750  950  750  1950
 Wire Wire Line
-	1250 4900 1250 5150
-Wire Wire Line
 	2100 5900 2100 6200
 Wire Wire Line
 	10050 9100 10050 7750
@@ -1369,21 +1338,17 @@ F 3 "~" H 3500 8650 50  0001 C CNN
 	1    3500 8650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	14700 8750 14700 8700
-Wire Wire Line
-	14500 8700 14500 8850
 Connection ~ 13800 8850
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F042FB4
-P 13800 8850
-F 0 "#FLG0101" H 13800 8925 50  0001 C CNN
-F 1 "PWR_FLAG" H 13800 9023 50  0000 C CNN
-F 2 "" H 13800 8850 50  0001 C CNN
-F 3 "~" H 13800 8850 50  0001 C CNN
-	1    13800 8850
-	1    0    0    -1  
+P 15150 9150
+F 0 "#FLG0101" H 15150 9225 50  0001 C CNN
+F 1 "PWR_FLAG" H 15150 9323 50  0000 C CNN
+F 2 "" H 15150 9150 50  0001 C CNN
+F 3 "~" H 15150 9150 50  0001 C CNN
+	1    15150 9150
+	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR01
@@ -1398,8 +1363,7 @@ F 3 "" H 15150 9200 50  0001 C CNN
 $EndComp
 Connection ~ 15150 8900
 Wire Wire Line
-	15150 9200 15150 8900
-Connection ~ 14500 8850
+	15150 9200 15150 9150
 $Comp
 L Connector:Conn_01x01_Female J45
 U 1 1 5F02A81E
@@ -1423,29 +1387,13 @@ F 3 "~" H 8050 1500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	15250 8850 14500 8850
-Wire Wire Line
 	15250 8750 15250 8850
-Connection ~ 15150 8750
 Wire Wire Line
 	15350 8900 15350 8750
 Wire Wire Line
 	15150 8900 15350 8900
 Wire Wire Line
 	15150 8750 15150 8900
-Wire Wire Line
-	14700 8750 15150 8750
-$Comp
-L main-board-rescue:6AL5-Valve U1
-U 3 1 5EE1C8AA
-P 14600 8300
-F 0 "U1" H 14372 8263 50  0000 R CNN
-F 1 "6AL5" H 14372 8172 50  0000 R CNN
-F 2 "wv98:6AL5" H 14600 8250 50  0001 C CNN
-F 3 "https://frank.pocnet.net/sheets/093/6/6AL5.pdf" H 14600 8250 50  0001 C CNN
-	3    14600 8300
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Valve:ECC83 U2
 U 3 1 5EDEF4D3
@@ -1853,8 +1801,6 @@ Wire Wire Line
 	2050 10500 2050 10300
 Wire Wire Line
 	13800 8850 13400 8850
-Wire Wire Line
-	13800 8850 14500 8850
 $Comp
 L Connector:Conn_01x01_Female J51
 U 1 1 5F48A607
@@ -2210,4 +2156,81 @@ F 3 "" H 12000 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12000 2450 12000 2350
+Wire Wire Line
+	13800 8850 15250 8850
+$Comp
+L Device:R R106
+U 1 1 5F0EB7CD
+P 1150 5800
+F 0 "R106" V 1357 5800 50  0000 C CNN
+F 1 "180" V 1266 5800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 1080 5800 50  0001 C CNN
+F 3 "~" H 1150 5800 50  0001 C CNN
+F 4 "10%" V 1150 5800 50  0001 C CNN "Tol"
+F 5 "1/4" V 1150 5800 50  0001 C CNN "P"
+	1    1150 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1150 5450 1150 5650
+Wire Wire Line
+	1150 5150 1150 4900
+Wire Wire Line
+	1150 4900 2100 4900
+Wire Wire Line
+	2100 5150 2100 4900
+Connection ~ 2100 4900
+Wire Wire Line
+	2100 4900 2450 4900
+Wire Wire Line
+	2100 5600 2100 5450
+$Comp
+L Diode:1N4148 D7
+U 1 1 5F0EAEDD
+P 1150 5300
+F 0 "D7" V 1196 5220 50  0000 R CNN
+F 1 "1N4148" V 1105 5220 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 1150 5125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1150 5300 50  0001 C CNN
+	1    1150 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D8
+U 1 1 5F105049
+P 2100 5750
+F 0 "D8" V 2146 5670 50  0000 R CNN
+F 1 "1N4148" V 2055 5670 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 2100 5575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2100 5750 50  0001 C CNN
+	1    2100 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R107
+U 1 1 5F106118
+P 2100 5300
+F 0 "R107" V 2307 5300 50  0000 C CNN
+F 1 "180" V 2216 5300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 2030 5300 50  0001 C CNN
+F 3 "~" H 2100 5300 50  0001 C CNN
+F 4 "10%" V 2100 5300 50  0001 C CNN "Tol"
+F 5 "1/4" V 2100 5300 50  0001 C CNN "P"
+	1    2100 5300
+	-1   0    0    1   
+$EndComp
+Connection ~ 15150 9150
+Wire Wire Line
+	15150 9150 15150 8900
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5F12CE02
+P 13800 8850
+F 0 "#FLG0103" H 13800 8925 50  0001 C CNN
+F 1 "PWR_FLAG" H 13800 9023 50  0000 C CNN
+F 2 "" H 13800 8850 50  0001 C CNN
+F 3 "~" H 13800 8850 50  0001 C CNN
+	1    13800 8850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
